@@ -239,12 +239,39 @@ section {
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 700;
+  gap: 0.1rem;
   color: var(--color-dark-blue);
+  text-decoration: none;
+  margin-left: 0;
+  margin-right: 1.8rem;
+  padding-left: 0.2rem;
+}
+
+.brand-logo {
+  height: 74px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin-right: 0.2rem;
+  flex-shrink: 0;
+}
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 0.84;
+  font-family: var(--font-serif);
+  font-weight: 700;
   letter-spacing: 0.02em;
+  margin-right: 1.8rem;
+}
+
+.brand-top,
+.brand-bottom {
+  display: block;
+  color: var(--color-dark-blue);
+  font-size: 1.18rem;
 }
 
 .logo-icon {
@@ -329,6 +356,248 @@ section {
 
   .navbar-cta {
     width: 100%;
+  }
+}
+
+.nav-link.active {
+  color: var(--color-sage-green);
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.mission-hero {
+  padding-top: 9.5rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(120deg, #E8EDDD 0%, #F2F0E5 100%);
+  border-bottom: 0;
+}
+
+.mission-header-content {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.mission-hero > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.mission-header-image {
+  position: relative;
+  width: 48%;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.mission-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mission-header-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, transparent 24%, rgba(30, 45, 26, 0.12) 58%, rgba(30, 45, 26, 0.7) 100%),
+    linear-gradient(to top, rgba(30, 45, 26, 0.58) 0%, transparent 48%);
+}
+
+.mission-hero .section-tag {
+  background-color: #C9D9B4;
+  color: #22331F;
+}
+
+.mission-hero .page-header-title {
+  color: #22331F;
+  font-family: var(--font-serif);
+}
+
+.mission-hero .page-header-sub {
+  color: #465240;
+}
+
+.mission-grid-section {
+  padding: 4rem 0 5rem;
+  background: #F5F0E6;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.mission-card {
+  position: relative;
+  min-height: 500px;
+  background: #17301C;
+  border: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mission-image-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.mission-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 48, 28, 0) 0%,
+    rgba(23, 48, 28, 0) 70px,
+    rgba(23, 48, 28, 0.18) 100px,
+    rgba(23, 48, 28, 0.48) 125px,
+    rgba(23, 48, 28, 0.78) 150px,
+    #17301c 180px,
+    #17301c 100%
+  );
+}
+
+.mission-body {
+  position: relative;
+  z-index: 2;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 200px 1.25rem 1.25rem;
+  background: transparent !important;
+  border-radius: 0;
+}
+
+.mission-label {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  color: #cfe0b8;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mission-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #C9D9B4;
+  color: #22331F;
+}
+
+.mission-body h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2vw, 1.5rem);
+  margin-bottom: 0.55rem;
+  color: #E5E8DC;
+}
+
+.mission-body p {
+  font-size: 0.78rem;
+  color: #E5E8DC;
+  line-height: 1.45;
+}
+
+.values-section {
+  padding: 4rem 0 5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(27, 46, 60, 0.08);
+  border-radius: 22px;
+  padding: 1.5rem 1.2rem;
+  box-shadow: 0 10px 25px rgba(27, 46, 60, 0.04);
+}
+
+.value-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-sage-green);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+}
+
+.value-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-dark-blue);
+}
+
+.value-card p {
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .mission-hero > .container {
+    gap: 2rem;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .mission-hero > .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mission-header-content,
+  .mission-header-image {
+    width: 100%;
+  }
+
+  .mission-header-image {
+    height: 260px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
   }
 }
 
