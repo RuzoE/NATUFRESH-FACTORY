@@ -718,7 +718,8 @@ section {
 
 .location-card {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
   gap: 3rem;
   align-items: stretch;
   padding: 3rem;
@@ -765,8 +766,17 @@ section {
   border-radius: 50%;
   background-color: var(--color-green-light);
   color: var(--color-sage-green);
-  font-size: 1.15rem;
   line-height: 1;
+}
+
+.location-detail-icon svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .location-detail div {
@@ -794,7 +804,10 @@ section {
 }
 
 .location-map {
+  min-width: 0;
+  width: 100%;
   min-height: 390px;
+  height: 100%;
   overflow: hidden;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -803,9 +816,10 @@ section {
 
 .location-map iframe {
   display: block;
+  min-width: 0;
+  max-width: 100%;
   width: 100%;
   height: 100%;
-  min-height: 390px;
   border: 0;
 }
 
@@ -819,13 +833,12 @@ section {
   }
 
   .location-card {
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .mission-hero {
     min-height: 0;
     max-height: none;
@@ -894,7 +907,8 @@ section {
 
   .location-map,
   .location-map iframe {
-    min-height: 320px;
+    height: 320px;
+    min-height: 300px;
   }
 }
 
