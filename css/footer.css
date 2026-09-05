@@ -30,9 +30,10 @@
 .footer-logo::before {
   content: "";
   width: 48px;
-  height: 58px;
+  height: 48px;
   flex: 0 0 auto;
-  background: url("../img/logo 1.png") center / contain no-repeat;
+  border-radius: 50%;
+  background: url("../img/logo nuevo.jpeg") center / cover no-repeat;
 }
 .footer-brand p { color: #465240; max-width: 330px; font-size: 0.95rem; }
 .footer-values {

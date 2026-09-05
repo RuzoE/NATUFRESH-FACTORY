@@ -622,11 +622,12 @@ section {
 }
 
 @media (max-width: 640px) {
-  .mission-hero {
+  .page-header.mission-hero {
     min-height: 0;
     max-height: none;
     height: auto;
     margin: 6.5rem 0 2rem;
+    overflow: visible;
   }
 
   .mission-split {
@@ -1183,12 +1184,15 @@ section {
 
 .contact-email-link {
   display: inline-block;
+  max-width: 100%;
   font-family: var(--font-serif);
   font-size: 1.3rem;
   color: var(--color-sage-green);
   font-weight: 600;
   margin: 1rem 0 1.5rem 0;
   border-bottom: 2px solid var(--color-sage-green);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .contact-form {
@@ -1305,22 +1309,45 @@ textarea.form-control {
   }
 
   .hero-floating-badge {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -24px;
-    max-width: calc(100% - 2rem);
+    left: auto;
+    right: 1rem;
+    transform: none;
+    bottom: -16px;
+    max-width: 200px;
+    padding: 0.7rem 0.9rem;
+    gap: 0.6rem;
   }
+
+  .badge-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .badge-text strong { font-size: 0.82rem; }
+  .badge-text span { font-size: 0.7rem; }
 
   .image-frame img {
     height: 260px;
   }
 
   .perception-card {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .perception-card::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+  }
+
+  .perception-grid {
+    justify-items: center;
   }
 
   .perception-thumb {
-    width: 160px;
+    width: 140px;
     margin: 0 auto;
   }
 
@@ -1362,6 +1389,10 @@ textarea.form-control {
 
   .contact-info h2 {
     font-size: 2rem;
+  }
+
+  .contact-email-link {
+    font-size: 1.05rem;
   }
 
   .differentiators-grid,

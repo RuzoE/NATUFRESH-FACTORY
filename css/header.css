@@ -41,14 +41,15 @@
 
 .brand-logo {
   height: 68px;
-  width: auto;
+  width: 68px;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
   flex-shrink: 0;
-  transition: height var(--transition);
+  transition: height var(--transition), width var(--transition);
 }
 
-.navbar.scrolled .brand-logo { height: 56px; }
+.navbar.scrolled .brand-logo { height: 56px; width: 56px; }
 
 .brand-wordmark {
   display: flex;
@@ -173,8 +174,8 @@
 }
 
 @media (max-width: 520px) {
-  .brand-logo { height: 52px; }
-  .navbar.scrolled .brand-logo { height: 44px; }
+  .brand-logo { height: 52px; width: 52px; }
+  .navbar.scrolled .brand-logo { height: 44px; width: 44px; }
   .brand-top,
   .brand-bottom { font-size: 0.98rem; }
 }

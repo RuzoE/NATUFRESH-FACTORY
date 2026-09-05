@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <a href="https://www.instagram.com/natufreshfactory?igsi=ZDR4cDc3MXRoZngy" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">${icons.instagram}</a>
               <a href="https://www.facebook.com/natufreshfactory/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">${icons.facebook}</a>
               <a href="https://wa.me/573244922859" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">${icons.whatsapp}</a>
-              <a href="mailto:natufreshfactory@gmail.com" class="social-icon" aria-label="Correo electrónico">${icons.socialEmail}</a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=natufreshfactory@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Correo electrónico">${icons.socialEmail}</a>
               <a href="https://www.tiktok.com/@natufreshfactory?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">${icons.tiktok}</a>
             </div>
           </div>
